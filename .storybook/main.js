@@ -30,9 +30,14 @@ const config = {
     // Add Tailwind CSS support
     config.css = config.css || {};
     config.css.postcss = config.css.postcss || {};
+    
+    // Use dynamic imports instead of require
+    const tailwindcss = (await import('tailwindcss')).default;
+    const autoprefixer = (await import('autoprefixer')).default;
+    
     config.css.postcss.plugins = [
-      require('tailwindcss'),
-      require('autoprefixer'),
+      tailwindcss,
+      autoprefixer,
     ];
 
     return config;
