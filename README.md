@@ -1,1 +1,1 @@
-# MAAGE Storybook
+# MAAGE UI Storybook
